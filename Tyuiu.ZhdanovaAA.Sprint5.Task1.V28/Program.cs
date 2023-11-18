@@ -53,7 +53,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task1.V28
 
             string[] y = File.ReadAllLines(path);
             
-            for (int x = startValue, i = 0; x <= stopValue - 1; x++, i++)
+            for (int x = startValue, i = 0; x <= stopValue; x++, i++)
             {
                 Console.WriteLine("| {0,6:d}      |   {1,6:f2}    |", x, Convert.ToDouble(y[i]));
             }
