@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 using Tyuiu.ZhdanovaAA.Sprint5.Task0.V1.Lib;
 
@@ -38,8 +39,14 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task0.V1
             Console.WriteLine("* РЕЗУЛЬТАТ                                                               *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine($"Файл: {ds.SaveToFileTextData(x)}");
+            string path = ds.SaveToFileTextData(x);
+            Console.WriteLine($"Файл: {path}");
             Console.WriteLine("Создан!");
+            Console.WriteLine();
+
+            string y = File.ReadAllText(path);
+
+            Console.WriteLine($"F(x) = {Convert.ToDouble(y)}");
             Console.ReadKey();
         }
     }
