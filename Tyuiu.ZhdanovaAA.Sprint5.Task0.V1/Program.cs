@@ -46,7 +46,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task0.V1
 
             string y = File.ReadAllText(path);
 
-            Console.WriteLine($"F(x) = {Convert.ToDouble(y)}");
+            Console.WriteLine($"f(x) = {Convert.ToDouble(y)}");
             Console.ReadKey();
         }
     }
