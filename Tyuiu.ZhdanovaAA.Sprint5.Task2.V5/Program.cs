@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 using Tyuiu.ZhdanovaAA.Sprint5.Task2.V5.Lib;
 
@@ -54,6 +55,20 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task2.V5
 
             Console.WriteLine($"Файл: {path}");
             Console.WriteLine("Создан!");
+            Console.WriteLine();
+
+            string[] y = File.ReadAllLines(path);
+
+            Console.WriteLine("Результирующий массив:");
+            for (int i = 0; i < rows; i++)
+            {
+                string[] yy = y[i].Split(';');
+                for (int j = 0; j < colums; j++)
+                {
+                    Console.Write(($"{Convert.ToDouble(yy[j])}\t"));
+                }
+                Console.WriteLine();
+            }
             Console.ReadKey();
         }
     }
