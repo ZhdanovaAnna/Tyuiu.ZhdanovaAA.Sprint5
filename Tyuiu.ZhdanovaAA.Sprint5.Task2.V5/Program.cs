@@ -65,7 +65,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task2.V5
                 string[] yy = y[i].Split(';');
                 for (int j = 0; j < colums; j++)
                 {
-                    Console.Write(($"{Convert.ToDouble(yy[j])}\t"));
+                    Console.Write(($"{Convert.ToDouble(yy[j])} \t"));
                 }
                 Console.WriteLine();
             }
