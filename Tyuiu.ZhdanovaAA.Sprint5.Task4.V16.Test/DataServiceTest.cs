@@ -25,9 +25,10 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task4.V16.Test
         {
             DataService ds = new DataService();
 
-            string path = @"C:\DataSprint5\InPutDataFileTask4V16.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask4.txt";
+            File.WriteAllText(path, Convert.ToString(2));
             double res = ds.LoadFromDataFile(path);
-            double wait = 13.935;
+            double wait = 0.251;
             Assert.AreEqual(wait, res);
         }
     }
