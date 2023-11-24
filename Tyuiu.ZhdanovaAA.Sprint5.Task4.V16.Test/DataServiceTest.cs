@@ -29,10 +29,12 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task4.V16.Test
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
-            if (!fileExists)
+            if (fileExists)
             {
-                File.WriteAllText(path, Convert.ToString(2));
+                File.Delete(path);
             }
+
+            File.WriteAllText(path, Convert.ToString(2));
             double res = ds.LoadFromDataFile(path);
             double wait = 0.251;
             Assert.AreEqual(wait, res);
