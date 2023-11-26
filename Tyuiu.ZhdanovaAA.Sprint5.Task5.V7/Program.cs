@@ -39,7 +39,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task5.V7
             Console.WriteLine("***************************************************************************");
 
             double res = ds.LoadFromDataFile(path);
-            Console.WriteLine(res);
+            Console.WriteLine($"Факториал 1-го целого числа = {res}");
             Console.ReadKey();
         }
     }
