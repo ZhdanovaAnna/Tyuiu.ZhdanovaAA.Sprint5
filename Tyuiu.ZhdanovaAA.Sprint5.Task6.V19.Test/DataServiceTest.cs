@@ -23,7 +23,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task6.V19.Test
         [TestMethod]
         public void CheckLoadFromDataFile()
         {
-            string path = @"C:\DataSprint5\InPutDataFileTask5V7.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask6V19.txt";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
