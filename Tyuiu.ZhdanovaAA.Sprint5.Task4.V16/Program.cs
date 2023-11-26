@@ -39,7 +39,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task4.V16
             Console.WriteLine("***************************************************************************");
 
             double res = ds.LoadFromDataFile(path);
-            Console.WriteLine(res);
+            Console.WriteLine($"y = {res}");
             Console.ReadKey();
         }
     }
