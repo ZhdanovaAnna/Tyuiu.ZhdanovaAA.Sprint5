@@ -12,32 +12,23 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task4.V16.Test
         [TestMethod]
         public void ValidLoadFromDataFile()
         {
+            DataService ds = new DataService();
+            string path = @"C:\DataSprint5\InPutDataFileTask4V16.txt";
+
+            var res = ds.LoadFromDataFile(path);
+            double wait = 13.935;
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void CheckLoadFromDataFile()
+        {
             string path = @"C:\DataSprint5\InPutDataFileTask4V16.txt";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
             Assert.AreEqual(wait, fileExists);
-        }
-
-        [TestMethod]
-        public void CheckLoadFromDataFile()
-        {
-            DataService ds = new DataService();
-
-            string path = @"C:\DataSprint5\InPutDataFileTask4.txt";
-
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-            if (fileExists)
-            {
-                File.Delete(path);
-            }
-
-            File.WriteAllText(path, Convert.ToString(2));
-            double res = ds.LoadFromDataFile(path);
-            double wait = 0.251;
-            Assert.AreEqual(wait, res);
         }
     }
 }
