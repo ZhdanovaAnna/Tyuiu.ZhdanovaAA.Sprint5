@@ -39,7 +39,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint5.Task6.V19
             Console.WriteLine("***************************************************************************");
 
             double res = ds.LoadFromDataFile(path);
-            Console.WriteLine(res);
+            Console.WriteLine($"Количество 2-значных чисел = {res}");
             Console.ReadKey();
         }
     }
